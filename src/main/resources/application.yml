@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active: dev
+
+server:
+  error:
+    include-message: always
+  port: 1337
+
+app:
+  datasource:
+    jdbc-url: jdbc:postgresql://172.19.37.135:5432/test_db
+#    jdbc-url: jdbc:postgresql://localhost:5432/test_db
+    username: root
+    password: root
+    pool-size: 30
+
+application:
+  jwt:
+    secretKey: thisisaveryverysecretandsafekeythisisaveryverysecretandsafekeythisisaveryverysecretandsafekey
+    tokenPrefix: Bearer
+    tokenExpirationAfterMinutes: 120
+
